@@ -1,3 +1,8 @@
+# React.js Routing Test.
+
+This project is for test and learn only. Depolyed here:
+http://reactroutertest.it-spec.com.pl/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
