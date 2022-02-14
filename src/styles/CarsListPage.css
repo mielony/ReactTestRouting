@@ -1,0 +1,16 @@
+.cars h2 {
+    margin: 20px;
+}
+
+.cars ul {
+    list-style: none;
+    padding-left: 40px;
+}
+
+.cars a {
+    text-decoration: none;
+}
+
+.cars a:hover {
+    text-decoration:  underline;
+}
