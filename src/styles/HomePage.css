@@ -1,0 +1,33 @@
+h1.home {
+    font-size: 28px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+h2.home {
+    font-size: 24px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+p.home {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+}
+
+
+ul.home {
+    font-size: 24px;
+    margin-bottom: 20px;
+    width: 90%; 
+    font-weight: bold;
+}
+
+ul.home li {
+    font-weight: normal;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
