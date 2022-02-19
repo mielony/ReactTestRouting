@@ -14,7 +14,7 @@ class ContactPage extends Component {
                 value: e.target.value,
             })
         }
-        if (e.target.type === "text") {
+        if (e.target.type === "email") {
             this.setState({
                 email: e.target.value,
             })
@@ -31,30 +31,29 @@ class ContactPage extends Component {
 
     render() { 
         return (
-            <div className="contact">
-                <form onSubmit={this.handleSendBtn} >
-                    <h2>Send me a message.</h2>
-                    <textarea 
-                        value={this.state.value} 
-                        onChange={this.handleFromChange} 
-                        placeholder="Type your message here " 
-                    />
-                    <br />
-                    <label>
-                        Leave your email: 
-                        <input 
-                            type="text" 
-                            name="email" 
-                            value={this.state.email} 
-                            onChange={this.handleFromChange}
-                            placeholder="enter your email address here"
-                        />
-                    </label>
-                    <br />
-                    <button >Send</button>
-                </form>
-                
+            <form>
+            <div className="mb-3">
+                <label for="MessageInput" className="form-label">Send me a message.</label>
+                <textarea 
+                    className="form-control" 
+                    value={this.state.value} 
+                    onChange={this.handleFromChange} 
+                    placeholder="Type your message here " />
             </div>
+            <div className="mb-3">
+                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                <input 
+                    type="email" 
+                    className="form-control" 
+                    name="email"
+                    value={this.state.email} 
+                    onChange={this.handleFromChange}
+                    placeholder="enter your email address here"
+                />
+                <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <button type="submit" className="btn btn-primary">Send</button>
+            </form>
         );
     }
 }

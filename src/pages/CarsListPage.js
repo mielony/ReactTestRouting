@@ -8,20 +8,38 @@ import {getCars} from '../db/carsDB.js';
 const CarsListPage = () => {
     const carsDB = getCars();
     const list = carsDB.map(car => (
-        <li key={car.id} >
-            <Link to={`/car/${car.id}`} key={car.id} >{car.make} {car.model} </Link>
-        </li>
-    ))
+            <tr key={car.id}>
+                <th>{car.id}</th>
+                <td>{car.make}</td>
+                <td>{car.model}</td>
+                <td><Link to={`/car/${car.id}`} key={car.id} > Details </Link></td>
+            </tr>
+     ))
+
 
     return ( 
-        <div className="cars">
-            <nav>
-            <ul>
+        // <div className="cars">
+        //     <nav>
+        //     <ul>
+        //         {list}
+        //     </ul>
+        //     </nav>
+        //     <Outlet />
+        // </div> 
+        <table className="table table-hover">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Make</th>
+                <th scope="col">Model</th>
+                <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
                 {list}
-            </ul>
-            </nav>
-            <Outlet />
-        </div> 
+                <Outlet />
+            </tbody>
+        </table >
     );
 }
 

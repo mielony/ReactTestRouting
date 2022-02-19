@@ -6,8 +6,9 @@ const CarPage = () => {
     let params = useParams();
     return ( 
         <>
-        <div>Car page</div>
+        <h1>Car page</h1>
         <Car id={params.carsId}/>
+        
         <Link to="/cars">Back to cars list.</Link>
         </>
      );

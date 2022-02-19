@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/HomePage.css'
 
 function HomePage() {
     return ( 
@@ -17,6 +16,7 @@ function HomePage() {
                         <li>React.js</li>
                         <li>Git and GitHub</li>
                         <li>Node.js</li>
+                        <li>Bootstrap</li>
                     </ul>
                 </li>
                 <li>that I will enjoy and have fun with code</li>
