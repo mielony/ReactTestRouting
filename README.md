@@ -1,7 +1,26 @@
 # React.js Routing Test.
 
 This project is for test and learn only. Depolyed here:
-http://reactroutertest.it-spec.com.pl/
+http://react.poc.it-spec.com.pl/
+
+# Welcome :)
+
+Welcome on this page that was build during my learing process of JavaScrip, Node.js and React.js. Hope you will like it :)
+
+## Proof of many concepts
+
+Few words of overview first. This is a small project/page that is a Po(m)C "Proof of many concetps".
+
+- Build to proof:
+  - that I still can code
+  - that I still can learn new technologies
+    - JavaScript
+    - JSX
+    - React.js
+    - Git and GitHub
+    - Node.js
+    - Bootstrap
+  - that I will enjoy and have fun with code
 
 # Getting Started with Create React App
 
