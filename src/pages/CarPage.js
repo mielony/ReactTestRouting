@@ -1,8 +1,10 @@
 import React from 'react';
 import Car from '../components/Car.js';
-import {Link, useParams} from 'react-router-dom';
+import {Link, useParams, useNavigate} from 'react-router-dom';
 
 const CarPage = () => {
+    const navigate = useNavigate();
+    const handleBack = () => navigate(-1);
     let params = useParams();
     return ( 
         <>
@@ -10,6 +12,8 @@ const CarPage = () => {
         <Car id={params.carsId}/>
         
         <Link to="/cars">Back to cars list.</Link>
+        <br />
+        <button onClick={handleBack}>Back done by useNavigate Hook :) </button>
         </>
      );
 }

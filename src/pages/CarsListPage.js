@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Navigate, Outlet, useNavigate } from 'react-router-dom';
 import '../styles/CarsListPage.css'
 import {getCars} from '../db/carsDB.js';
 
 
 
 const CarsListPage = () => {
+    const navigate = useNavigate();
+    const handleGoToCarDetails = (id) => navigate(`/car/${id}`);
     const carsDB = getCars();
     const list = carsDB.map(car => (
             <tr key={car.id}>
@@ -13,6 +15,7 @@ const CarsListPage = () => {
                 <td>{car.make}</td>
                 <td>{car.model}</td>
                 <td><Link to={`/car/${car.id}`} key={car.id} > Details </Link></td>
+                <td><button className="btn btn-primary" onClick={() => handleGoToCarDetails(car.id) } >Details with useNavigation hook</button></td>
             </tr>
      ))
 
@@ -33,6 +36,7 @@ const CarsListPage = () => {
                 <th scope="col">Make</th>
                 <th scope="col">Model</th>
                 <th scope="col">Action</th>
+                <th scopr="col">Hook action</th>
                 </tr>
             </thead>
             <tbody>
